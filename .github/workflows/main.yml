@@ -35,6 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
+      # Install dependencies
+      - name: Install dependencies...
+        run: npm install
+          
       # Run tests
       - name: Run tests...
         run: npm run test:prod
