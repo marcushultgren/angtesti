@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'angtesti';
+  title = 'for realz!';
+  counter = 0;
+
+  increment() {
+    this.counter += 1;
+  }
+
+  decrement() {
+    this.counter = Math.max(0, this.counter - 1);
+  }
 }
