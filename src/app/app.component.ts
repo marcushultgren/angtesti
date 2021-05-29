@@ -15,7 +15,6 @@ export class AppComponent {
   }
 
   decrement() {
-    this.counter += 1;
-    // this.counter = Math.max(0, this.counter - 1);
+    this.counter = Math.max(0, this.counter - 1);
   }
 }
